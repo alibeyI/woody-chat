@@ -1,0 +1,102 @@
+<div class="main">
+  <div class="header-main">
+    <div class="header">
+      <p class="messHead">Mesajlarim</p>
+      <div style="margin-right: 17px">
+        <img src="../../../../assets/icons/edit.svg" alt="" />
+      </div>
+    </div>
+    <div class="chat-search">
+      <div class="search-icon">
+        <img
+          class="search-i"
+          src="../../../../assets/icons/search.svg"
+          alt=""
+        />
+      </div>
+      <input type="text" placeholder="search" />
+    </div>
+  </div>
+  <div class="chats-container">
+    <div
+      class="chats"
+      style="width: 100%"
+      *ngFor="let profile of chatHistory; let i = index"
+    >
+      <!--  -->
+      <div
+        (mouseover)="over(i)"
+        class="mainProfile"
+        tabindex="{{ i }}"
+        (click)="goToChat($event, i)"
+      >
+        <div class="profile">
+          <div class="Therelative">
+            <div
+              (click)="onDetailClick(i)"
+              [ngClass]="
+                openDetail_chat === i ? 'details-chat' : 'details-chat-none'
+              "
+            >
+              <img
+                class="details-chat-icon"
+                src="../../../../assets/icons/details.svg"
+              />
+            </div>
+            <div *ngIf="detailTouch === i" class="delete_option">
+              <img
+                src="../../../../assets/icons/chat-detail-icon/trash-chat-detail.svg"
+              />
+              <p class="delete">Delete</p>
+            </div>
+          </div>
+          <div class="profilePhoto"><img src="{{ profile.img }}" alt="" /></div>
+          <div class="profileInfo">
+            <p class="name">{{ profile.name }}</p>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <p class="lastChat">{{ profile.lastChat }}</p>
+              <div class="profileTime">
+                <p class="lastInteractionTime">{{ profile.time }}</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="Therelative">
+            <div
+              (click)="onDetailClick(i)"
+              [ngClass]="
+                openDetail_chat === i ? 'details-chat' : 'details-chat-none'
+              "
+            >
+              <img
+                class="details-chat-icon"
+                src="../../../../assets/icons/details.svg"
+              />
+            </div>
+            <div *ngIf="detailTouch === i" class="delete_option">
+              <img
+                src="../../../../assets/icons/chat-detail-icon/trash-chat-detail.svg"
+              />
+              <p
+                style="
+                  margin: 0;
+                  font-family: SFProText;
+                  font-size: 14px;
+                  line-height: 16px;
+                "
+              >
+                DELETE
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <hr style="margin: 0px" /> -->
+</div>

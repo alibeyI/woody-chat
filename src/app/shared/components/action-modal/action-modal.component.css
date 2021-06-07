@@ -1,0 +1,63 @@
+.action-modal-container {
+  max-width: 460px;
+  min-width: 300px;
+  background: #fff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.action-modal-header {
+  display: flex;
+  justify-content: center;
+}
+
+.action-modal-header .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.action-modal-content {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: #0a1f44 !important;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.action-modal-buttons {
+  display: flex;
+  width: 100%;
+  padding: 15px 15px 25px;
+  justify-content: space-evenly;
+}
+
+app-next-button {
+  margin: 0 10px;
+  width: initial !important;
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  margin-top: 15px;
+  font-size: 25px;
+  line-height: 0;
+}
+
+.info {
+  background: #dceeff;
+  color: #003d7f;
+}
+
+.error {
+  background: #ffeaea;
+  color: #841717;
+}

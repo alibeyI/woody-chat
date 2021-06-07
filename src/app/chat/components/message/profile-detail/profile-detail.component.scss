@@ -1,0 +1,93 @@
+.main{
+  height: 84%;
+  border-left:1px solid rgba(0, 0, 0, 0.469) ;
+  font-family: "Inter",sans-serif;
+}
+.profile-img{
+  text-align: center;
+}
+.profile{
+  width: 200px;
+  
+  img{
+    width: 90px;
+    border-radius: 40px;
+    box-shadow: 0 0 1px 0 rgb(10 22 70 / 6%), 0 6px 6px -1px rgb(10 22 70 / 10%);
+    margin-top: 10px;
+  }
+}
+.list-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+  cursor: pointer;
+  transition: .4s;
+  height: 40px;
+  width: 90%;
+  img{
+    width: 10px;
+  }
+}
+.shared-files-list{
+  height: 180px;
+}
+
+.list{
+ .list-item{
+   display: flex;
+   justify-content: flex-start;
+   margin-left: 30px;
+   p{
+    margin-left: 10px;
+   }
+  
+ }
+  text-align: center;
+  a{
+    color: #776843;
+    text-decoration: none;
+  }
+}
+.add_people{
+  height: 40px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  img{
+    margin-right: 25px;
+    width: 20px;
+  }
+}
+
+
+.groupMemmebers{
+  .memmeber{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    img{
+      margin-right: 10px;
+       width: 30px;
+       height: 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 1px 0 rgb(10 22 70 / 6%), 0 6px 6px -1px rgb(10 22 70 / 10%);
+    }
+  }
+}
+
+@media screen and (max-width:700px){
+  .list-header{
+    margin: 10px;
+  }
+  .profile{
+    width: auto;
+  }
+}

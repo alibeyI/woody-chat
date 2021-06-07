@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="goBackButton" (click)="goBackToMessages()"><img src="../../../../assets/icons/right.svg" alt=""></div>
+<app-chat-search *ngIf="search"></app-chat-search>
+<app-profile-info
+  *ngIf="!search"
+  (click)="openProfileDetail()"
+></app-profile-info>
+</div>
+<!-- <div style="width: 52vw; height: 1px; background: #000"></div> -->
+<hr>
+<div class="main">
+  <div [ngClass]="ChatHider === true ? 'Hide' : 'container'">
+    <div class="conatiner-message-body">
+      <div class="message-body">
+        <div [innerHTML]="chats"></div>
+      </div>
+      <hr>
+      <app-chat-reply (reply)="addItem($event)"></app-chat-reply>
+    </div>
+  </div>
+  <div *ngIf="openDetails">
+    <app-profile-detail></app-profile-detail>
+  </div>
+</div>

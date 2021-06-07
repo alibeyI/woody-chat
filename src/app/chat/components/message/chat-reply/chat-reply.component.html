@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <button class="img Icon"><img src="../../../../../assets/icons/img-icon.svg" alt=""></button>
+  </div>
+  <div>
+    <button class="file Icon"><img src="../../../../../assets/icons/doc-add-icon.svg" alt=""></button>
+  </div>
+  <div class="main-input">
+    <!-- <form (submit)="sendTo()"> -->
+    <input
+      class="reply-input"
+      type="text"
+      placeholder="reply to {{ replyTo }}"
+      name="reply"
+      autocomplete="off"
+      #reply
+    />
+    <!-- </form> -->
+
+    <button class="emoji Icon"><img src="../../../../../assets/icons/emoji-icon.svg" alt=""></button>
+  </div>
+  <div>
+    <button class="send Icon" (click)="sendTo(reply.value)"><img src="../../../../../assets/icons/send-icon.svg" alt=""></button>
+  </div>
+</div>

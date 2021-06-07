@@ -1,0 +1,76 @@
+<div *ngIf="showActionModal" class="action-modal-container">
+  <div class="action-modal-header">
+    <div
+      *ngIf="data.type === 'info' || data.type === 'yesNo'"
+      class="icon-container info"
+    >
+      <i data-icon="m" class="icon"></i>
+    </div>
+    <div *ngIf="data.type === 'confirm'" class="icon-container info">
+      <i data-icon="m" class="icon"></i>
+    </div>
+    <div
+      *ngIf="data.type === 'error' || data.type === 'attempt'"
+      class="icon-container error"
+    >
+      <i data-icon="m" class="icon"></i>
+    </div>
+    <img
+      *ngIf="data.type !== 'attempt'"
+      (click)="close()"
+      class="close"
+      src="../../../../assets/images/action-modal/action-modal-close.svg"
+    />
+  </div>
+  <div class="action-modal-content">
+    {{ data.text }}
+  </div>
+
+  <div *ngIf="data.type === 'confirm'" class="action-modal-buttons">
+    <app-next-button
+      [width]="'150px'"
+      (click)="data.cancelFunction(); close()"
+      bordered="true"
+      [text]="'İmtina et'"
+    ></app-next-button>
+    <app-next-button
+      [width]="'150px'"
+      (click)="data.confirmFunction(); close()"
+      [text]="'İcazə ver'"
+    ></app-next-button>
+  </div>
+  <div *ngIf="data.type === 'attempt'" class="action-modal-buttons">
+    <app-next-button
+      [width]="'150px'"
+      (click)="data.confirmFunction()"
+      [text]="'Təkrar'"
+    ></app-next-button>
+  </div>
+  <div *ngIf="data.type === 'yesNo'" class="action-modal-buttons">
+    <app-next-button
+      [width]="'150px'"
+      (click)="data.cancelFunction(); close()"
+      bordered="true"
+      [text]="'Xeyr'"
+    ></app-next-button>
+    <app-next-button
+      [width]="'150px'"
+      (click)="data.confirmFunction(); close()"
+      [text]="'Bəli'"
+    ></app-next-button>
+  </div>
+  <div *ngIf="data.type === 'info'" class="action-modal-buttons">
+    <app-next-button
+      [width]="'100px'"
+      (click)="close()"
+      [text]="'OK'"
+    ></app-next-button>
+  </div>
+  <div *ngIf="data.type === 'error'" class="action-modal-buttons">
+    <app-next-button
+      [width]="'100px'"
+      (click)="close()"
+      [text]="'OK'"
+    ></app-next-button>
+  </div>
+</div>

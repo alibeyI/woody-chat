@@ -1,0 +1,216 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-main {
+  margin: 5px 5px 10px 5px;
+}
+.messHead {
+  font-size: 21px;
+  font-weight: bold;
+  margin-left: 10px;
+  font-family: "Inter var", sans-serif;
+}
+
+.chats-container {
+  height: 580px;
+  overflow-y: scroll;
+}
+
+.chat-search {
+  display: flex;
+  justify-content: center;
+}
+.details-chat {
+  display: flex;
+  justify-content: flex-end;
+  transition: 1s;
+}
+
+.details-chat-icon {
+  margin-bottom: 20px;
+}
+
+// ngClass while hover
+.details-chat-none {
+  opacity: 0;
+  .details-chat-icon {
+    margin-bottom: 17px;
+  }
+}
+
+.search-icon {
+  height: 32px;
+  border-right: none;
+  border-radius: 4px 0px 0px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f2f4;
+
+  .search-i {
+    margin: 0px 10px 0px 10px;
+  }
+}
+.chat-search input {
+  width: 80%;
+  border: 1px solid transparent;
+  border-left: none;
+  border-radius: 0px 4px 4px 0px;
+  outline: none;
+  background: #f1f2f4;
+}
+.chats {
+  border: 1px solid black;
+  border-left: none;
+  border-right: none;
+  height: 90px;
+  width: 280px;
+  transition: 0.5s;
+}
+.mainProfile {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  height: 92px;
+  background-color: #fff;
+  margin: 0px;
+}
+.mainProfile :focus {
+  background-color: #000;
+}
+.profile {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-right: 10px;
+}
+.profilePhoto {
+  height: 40px;
+  width: 40px;
+  border-radius: 160px;
+  background-color: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(10, 22, 70, 0.06),
+    0 6px 6px -1px rgba(10, 22, 70, 0.1);
+  margin: 0 2% 0 2%;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 160px;
+  }
+}
+.profileInfo {
+  width: 100%;
+  .name {
+    height: 24px;
+    width: 100%;
+    color: #4a4a4a;
+    font-family: "Inter var", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 24px;
+    margin: 0px;
+  }
+  .lastChat {
+    height: 17px;
+    color: #776843;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin: 0px;
+  }
+}
+.delete {
+  margin: 0;
+  font-family: "SFProText",sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4A4A4A;
+}
+.Therelative {
+  position: relative;
+  top: -25px;
+  left: calc(98% - 10px);
+}
+.delete_option {
+  width: 112px;
+  height: 42px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 1px 0 rgba(10, 22, 70, 0.06),
+    0 16px 16px -1px rgba(10, 22, 70, 0.1);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+.profileTime {
+  height: 15px;
+  width: 71px;
+  color: #666666;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 15px;
+  .lastInteractionTime {
+    height: 15px;
+    width: 71px;
+    color: #666666;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 15px;
+    margin: 0px;
+  }
+}
+@media screen and(max-width: 1000px) {
+  // .profile {
+  //   width: 150px;
+  // }
+  // .main {
+  //   width: 41vw;
+  // }
+}
+@media screen and (max-width: 750px) {
+  .profile {
+    width: 150px;
+  }
+
+  .profilePhoto {
+    width: 30px;
+    height: 30px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .profileInfo {
+    .name {
+      font-size: 11px;
+      height: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      font-family: "Inter", sans-serif;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .chats-container {
+    width: 90vw;
+  }
+  .header-main {
+    width: 90vw;
+  }
+  .main {
+    width: 32vw;
+  }
+}

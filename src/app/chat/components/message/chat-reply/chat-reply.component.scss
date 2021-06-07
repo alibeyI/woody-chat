@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 66px;
+  margin: 14px;
+}
+.main-input {
+  width: 80%;
+  background: #f4f4f7;
+  border-radius: 4px;
+  height: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .reply-input {
+    width: 180%;
+    border: none;
+    background: #f4f4f7;
+    height: 33px;
+    font-size: medium;
+    padding-left: 12px;
+  }
+  .reply-input:focus {
+    outline: none;
+  }
+}
+.Icon {
+  border: none;
+  background: none;
+  outline: none;
+}
+.file, .emoji, .send{
+  margin-right:10px;
+}
+
+@media screen and(max-width: 1000px) {
+  
+}
